@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
+import BookList from './components/BookList/bookList';
+import { getBooks } from './store/slices/bookSlice';
+import { AppDispatch, RootState } from './store/store';
 
 function App() {
+  const dispatch: AppDispatch = useDispatch()
+  const books = useSelector((state: RootState) => state.book.books)
+  console.log(books.length)
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <h1>Hello there</h1>
+      <button onClick={() => console.log(books)}>Show state</button>
+      {books.length > 1 ?
+        <BookList books={books}></BookList>
+        : <h2>Loading</h2>
+      }
+    </div >
   );
 }
 
