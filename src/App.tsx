@@ -26,12 +26,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello there</h1>
-      <button onClick={() => console.log(books)}>Show state</button>
+      <h1>This app contains RTK, createAsyncThunk, axios get/post types</h1>
+      <hr></hr>
+      <h2>mock data from fake api axios get</h2>
       {books.length > 1 ?
         <BookList books={books}></BookList>
         : <h2>Loading</h2>
       }
+      <h2>show actual state</h2>
+      <button onClick={() => console.log(books)}>Show state</button>
+      <h2>send fake data to json placeholder</h2>
       <form className='form' onSubmit={handleSubmit}>
         <input type="text" className='form__title' name='title' placeholder='title' />
         <input type="text" className='form__body' name='body' placeholder='body' />
