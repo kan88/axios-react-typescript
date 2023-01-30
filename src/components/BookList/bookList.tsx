@@ -1,4 +1,3 @@
-import React from 'react'
 import { StateBook } from '../../store/slices/bookSlice'
 import BookItem from '../BookItem/bookItem'
 import styles from './bookList.module.css'
@@ -9,10 +8,10 @@ interface BookProps {
 
 export default function BookList(props: BookProps) {
     const { books } = props
-    console.log(props)
     return (
-        <ul className={styles.books__list}>
+        <ul className={styles.book__list}>
             {books && books.map(book => {
+                console.log(book)
                 return <BookItem key={book.id} {...book}></BookItem>
             })}
         </ul >

@@ -1,26 +1,33 @@
 .book__item {
     width: 350px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    border: 1px dotted gray;
 }
 
 .book__image {
     width: 290px;
     height: 340px;
+    margin-bottom: 10px;
 }
 
 .book__wrapper {
     display: flex;
-    align-items: flex-start;
+    justify-content: space-between;
+    width: 290px;
 }
 
 .book__title {
     width: 100px;
     margin-right: 10px;
+    text-align: left;
+    font-weight: bold;
 }
 
 .book__body {
     width: 210px;
+    text-align: right;
 }

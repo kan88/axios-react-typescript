@@ -8,7 +8,6 @@ import { AppDispatch, RootState } from './store/store';
 function App() {
   const dispatch: AppDispatch = useDispatch()
   const books = useSelector((state: RootState) => state.book.books)
-  console.log(books.length)
 
   useEffect(() => {
     dispatch(getBooks());
