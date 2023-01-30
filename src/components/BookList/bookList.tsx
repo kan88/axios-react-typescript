@@ -11,7 +11,6 @@ export default function BookList(props: BookProps) {
     return (
         <ul className={styles.book__list}>
             {books && books.map(book => {
-                console.log(book)
                 return <BookItem key={book.id} {...book}></BookItem>
             })}
         </ul >
