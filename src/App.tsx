@@ -34,13 +34,13 @@ function App() {
         : <h2>Loading</h2>
       }
       <h2>show actual state</h2>
-      <button onClick={() => console.log(books)}>Show state</button>
+      <button style={{ marginBottom: '20px', border: 'none', backgroundColor: 'green', width: '250px', borderRadius: '35px', padding: '20px', color: 'white', fontSize: '24px', textTransform: 'uppercase' }} onClick={() => console.log(books)}>Show state</button>
       <h2>send fake data to json placeholder</h2>
-      <form className='form' onSubmit={handleSubmit}>
-        <input type="text" className='form__title' name='title' placeholder='title' />
-        <input type="text" className='form__body' name='body' placeholder='body' />
-        <input type="text" className='form__userid' name='userId' placeholder='id' />
-        <button type='submit'>submit</button>
+      <form className='form' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} onSubmit={handleSubmit}>
+        <input style={{ marginBottom: '20px', width: '400px', padding: '5px 10px' }} type="text" className='form__title' name='title' placeholder='title' />
+        <input style={{ marginBottom: '20px', width: '400px', padding: '5px 10px' }} type="text" className='form__body' name='body' placeholder='body' />
+        <input style={{ marginBottom: '20px', width: '400px', padding: '5px 10px' }} type="text" className='form__userid' name='userId' placeholder='id' />
+        <button style={{ marginBottom: '20px', border: 'none', backgroundColor: 'green', width: '250px', borderRadius: '35px', padding: '20px', color: 'white', fontSize: '24px', textTransform: 'uppercase' }} type='submit'>submit</button>
       </form>
     </div >
   );
